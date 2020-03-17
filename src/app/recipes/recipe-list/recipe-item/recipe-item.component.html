@@ -1,4 +1,4 @@
-<a href="#" class="list-group-item clearfix" (click)="showDetails()">
+<!-- <a href="#" class="list-group-item clearfix" (click)="showDetails()">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{recipeItem.name}}</h4>
         <p class="list-group-item-text">{{recipeItem.description}}</p>
@@ -6,4 +6,17 @@
     <span class="pull-right">
         <img src="{{recipeItem.imagePath}}" alt="recipeItem.name" class="img-responsive" style="max-height: 50px;">
     </span>
+</a> -->
+
+<a class="list-group-item clearfix" [routerLink]="[recipeItem.id]" routerLinkActive="router-link-active" >
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{recipeItem.name}}</h4>
+        <p class="list-group-item-text">{{recipeItem.description}}</p>
+    </div>
+    <span class="pull-right">
+        <p>{{recipeItem.id}}</p> 
+        <img src="{{recipeItem.imagePath}}" alt="recipeItem.name" class="img-responsive" style="max-height: 50px;">
+    </span>
 </a>
+
+<!-- style="cursor: pointer;" //ENABLES THE POINTER IF NECESSARALY-->

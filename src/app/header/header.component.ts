@@ -1,4 +1,5 @@
 import {Component, Output,EventEmitter} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector:'app-header',
@@ -6,14 +7,5 @@ import {Component, Output,EventEmitter} from '@angular/core';
 })
 
 export class HeaderComponent{
-
-    @Output() displayPage = new EventEmitter<string>();
-
-    onRecipes(){
-        this.displayPage.emit("Recipes");
-    }
-    onShoppingList(){
-        this.displayPage.emit("ShoppingList");
-    }
 
 }

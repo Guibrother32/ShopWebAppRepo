@@ -8,6 +8,9 @@ import { RecipesService } from 'src/app/shared/recipes.service';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
+
+
+  @Input() index:number;
   @Input() recipeItem:Recipe;
   constructor(private recipeService:RecipesService) { }
   ngOnInit(): void {
